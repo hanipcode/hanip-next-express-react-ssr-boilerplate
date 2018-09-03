@@ -65,7 +65,7 @@ export async function loginUser(req: Request, res: Response) {
     res.status(200).json({
       message: 'Successfully Logged In',
       data: {
-        ...user,
+        user,
         accessToken,
       },
       accessToken,
