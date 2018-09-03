@@ -4,7 +4,7 @@ express JS Rest Api with opinionated config and auth already made
 
 It still work in progress and pretty much opinionated
 
-# How to Install
+## About
 
 ExpressJS Based Rest Api boilerplate by me, dibuat karena iri laravel kalau baru init project dan butuh sistem authentifikasi tinggal `php artisan make:auth`
 fitur & package:
@@ -17,7 +17,11 @@ fitur & package:
 - async controllers with js async/await instead of promise for more readability
 - logger system ready to use
 - no more because i am too sleepy to add more feature
-  how to use:
+
+## How to Install
+
+how to use:
+
 - git clone https://github.com/hanipcode/hanip-express-api-with-auth-boilerplate.git yourAwesomeProject
 - cd yourAwesomeProject
 - npm install
