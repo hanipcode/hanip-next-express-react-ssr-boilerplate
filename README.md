@@ -7,7 +7,8 @@ It still work in progress and pretty much opinionated
 ## About
 
 ExpressJS Based Rest Api boilerplate by me, dibuat karena iri laravel kalau baru init project dan butuh sistem authentifikasi tinggal `php artisan make:auth`
-fitur & package:
+
+### fitur & package:
 
 - JWT based auth pre-made with bcrypt password hash
 - Linted with eslint
@@ -20,7 +21,7 @@ fitur & package:
 
 ## How to Install
 
-how to use:
+### how to use:
 
 - git clone https://github.com/hanipcode/hanip-express-api-with-auth-boilerplate.git yourAwesomeProject
 - cd yourAwesomeProject
