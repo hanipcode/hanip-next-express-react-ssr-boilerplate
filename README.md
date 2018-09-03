@@ -4,7 +4,7 @@ express JS Rest Api with opinionated config and auth already made
 
 It still work in progress and pretty much opinionated
 
-## How to Install
+# How to Install
 
 ExpressJS Based Rest Api boilerplate by me, dibuat karena iri laravel kalau baru init project dan butuh sistem authentifikasi tinggal `php artisan make:auth`
 fitur & package:
