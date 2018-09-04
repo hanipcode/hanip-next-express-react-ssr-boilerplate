@@ -5,6 +5,13 @@ const router = express.Router();
 const userController = require('../controllers/user');
 
 /**
+ * @swagger
+ * tags:
+ *   name: Users
+ *   description: User management and login
+ */
+
+/**
  *@swagger
  *parameters:
  *  email:
@@ -14,12 +21,7 @@ const userController = require('../controllers/user');
  *    required: true
  *    type: string
  */
-/**
- * @swagger
- * tags:
- *   name: Users
- *   description: User management and login
- */
+
 /**
  *@swagger
  *parameters:
@@ -33,6 +35,15 @@ const userController = require('../controllers/user');
  */
 
 /**
+ * @swagger
+ * parameters:
+ *  userId:
+ *    name: userId
+ *    in: path
+ *    description: id of the user
+ *    type: number
+ */
+/**
  *@swagger
  *definitions:
  *  User:
@@ -40,10 +51,26 @@ const userController = require('../controllers/user');
  *    required:
  *      - email
  *      - accessToken
+ *      - first_name
+ *      - last_name
  *    properties:
  *      email:
  *        type: string
  *      accessToken:
+ *        type: string
+ *      username:
+ *        type: string
+ *      first_name:
+ *        type: string
+ *      last_name:
+ *        type: string
+ *      location_coordinate:
+ *        type: string
+ *      location_name:
+ *        type: string
+ *      phone_number:
+ *        type: string
+ *      _id:
  *        type: string
  */
 /**
@@ -90,4 +117,24 @@ router.route('').post(userController.createUser);
  *           $ref: '#/definitions/User'
  */
 router.route('/auth').post(userController.loginUser);
+
+/**
+ * @swagger
+ * /user/{userId}:
+ *   get:
+ *     description: Get specific user by user id
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - $ref: '#/parameters/userId'
+ *     tags:
+ *       - Users
+ *     responses:
+ *       200:
+ *         description: succesfully get
+ *         schema:
+ *           type: object
+ *           $ref: '#/definitions/User'
+ */
+router.route('/:userId').get(userController.getSingleUser);
 module.exports = router;

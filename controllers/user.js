@@ -8,15 +8,20 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
 export type UserRegistrationParam = {
+  _id: string,
   email: string,
   password: string,
+  first_name: string,
+  last_name: string,
+  phone_number: string,
+  user_location_coordinate?: string,
+  user_location_name?: string,
 };
 export type UserLoginParam = {
   email: string,
   password: string,
 };
 
-// eslint-disable-next-line
 export async function createUser(req: Request, res: Response) {
   const param: UserRegistrationParam = req.body;
   try {
@@ -32,6 +37,12 @@ export async function createUser(req: Request, res: Response) {
   } catch (error) {
     res.status(500).json({ error });
   }
+}
+
+export async function getSingleUser(req: Request, res: Response) {
+  const { userId } = req.params;
+  console.log(req.params);
+  res.json({ userId });
 }
 
 export async function loginUser(req: Request, res: Response) {
