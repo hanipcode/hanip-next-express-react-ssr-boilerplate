@@ -4,9 +4,6 @@ export const DEFAULT_HEADER = {
 };
 
 export function buildResponse(response: Response) {
-  if (response.status > 299) {
-    response.text().then(text => console.log(text));
-  }
   return response.json();
 }
 
