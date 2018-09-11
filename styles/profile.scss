@@ -1,0 +1,10 @@
+@import 'common';
+
+.profile-picture {
+  @include profile-picture();
+  margin-top: 40px;
+}
+
+.text-username {
+  font-size: 1.5rem;
+}

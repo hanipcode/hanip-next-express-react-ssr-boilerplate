@@ -1,0 +1,35 @@
+.navbar-holder {
+  position: fixed;
+}
+
+.sidenav-overlay {
+  z-index: 996 !important;
+}
+
+.right-button-item {
+  text-align: center;
+  position: absolute;
+  right: 0;
+  width: 10%;
+  box-sizing: border-box;
+}
+.custom-overlay {
+  transform: translateX(-105%);
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 996 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: 0.5s all;
+}
+
+.custom-overlay.overlay-active {
+  transform: translateX(0%);
+  transition: 0.5s all;
+  pointer-events: all;
+}

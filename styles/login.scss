@@ -1,0 +1,17 @@
+.loginContent {
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.register-text {
+  margin-top: 32px;
+}

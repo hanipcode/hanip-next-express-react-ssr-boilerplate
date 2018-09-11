@@ -1,3 +1,15 @@
 {
-  "presets": ["flow", "es2015"]
+  "presets": ["@babel/env", "next/babel"],
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    "transform-flow-strip-types",
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ]
 }
