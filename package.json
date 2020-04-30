@@ -24,7 +24,7 @@
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "isomorphic-unfetch": "^3.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.14",
     "lru-cache": "^5.1.1",
